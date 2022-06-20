@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>곤충박멸!</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="screen section1">
+        <h1 id="title">곤충 박멸 게임</h1>
+        <button class="btn" id="start-btn">게임 시작</button>
+    </div>
+    <div class="screen section2">
+        <h2 id="insects-name">가장 "싫어"하는 곤충은 무엇인가요?</h2>
+        <ul class="content-list">
+            <li>
+                <button class="choice-btn">
+                    <p>말벌</p>
+                    <img src="./img/bee.png" alt="...말벌..">
+                </button>
+            </li>
+            <li>
+                <button class="choice-btn">
+                    <p>파리</p>
+                    <img src="./img/fly.png" alt="...파리..">
+                </button>
+            </li>
+            <li>
+                <button class="choice-btn">
+                    <p>모기</p>
+                    <img src="./img/mosquieto.png" alt="...모기..">
+                </button>
+            </li>
+            <li>
+                <button class="choice-btn">
+                    <p>거미</p>
+                    <img src="./img/spider.png" alt="...거미..">
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="screen container" id="container">
+        <span id="time" class="time">시간 : 00:00</span>
+        <span id="score" class="score">점수 : 0</span>
+        <span id="restart">다시시작하기</span>
+        <span id="message" class="message">스트레스 해소 되셨나요?!<br />
+            당신은 현실에서도 벌레를 잡을 수 있습니다!</span>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

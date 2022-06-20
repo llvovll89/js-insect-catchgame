@@ -196,7 +196,14 @@ a {
 @media (max-width: 564px) {
     .screen {
         max-width: 90%;
-        min-height: 100vh;
+    }
+    #insects-name {
+        margin-top: 1rem;
+        font-size: 1.25rem;
+    }
+    .choice-btn {
+        width: 155px;
+        height: 150px;
     }
 
     .time, .score, .message {

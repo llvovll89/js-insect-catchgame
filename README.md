@@ -7,4 +7,5 @@
 ```
 const restart = document.getElementById("restart");
 // restart Dom 설정하여 - clearInterval 후 > restart 기능 추가하기
+// + 벌레가 첫번째 클릭후 - 급격히 등장하는 부분 고치기
 ```

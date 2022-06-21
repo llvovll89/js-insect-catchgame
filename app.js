@@ -116,12 +116,12 @@ function catchInsect() {
 
 function addInsects() {
   setTimeout(createInsect, 2000);
-  setTimeout(createInsect, 4000);
+  // setTimeout(createInsect, 4000);
 }
 
 function increaseScore() {
   score++;
-  if (score > 39) {
+  if (score > 29) {
     message.classList.add("visible");
   }
   scorePoint.innerHTML = `Score: ${score}`;

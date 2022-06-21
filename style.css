@@ -12,7 +12,7 @@ body {
     min-height: 100vh;
     overflow: hidden;
     color: #ffffff;
-    background: #504B84;
+    background: rgb(39, 39, 42);
     font-family: 'Poppins', sans-serif;
 }
 
@@ -44,9 +44,10 @@ a {
 }
 
 #title {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.85);
     border-radius: 12px;
     padding: 1rem;
+    color: #000;
     letter-spacing: .25rem;
 }
 
@@ -56,8 +57,8 @@ a {
     font-size: 1.25rem;
     border-radius: 6px;
     box-shadow: 3px 6px 2px rgba(0, 0, 0, 0.35);
-    background: #61c3ed;
-    color: #ffffff;
+    background: #f3f3f3;
+    color: black;
     cursor: pointer;
     transition: all .3s ease-out;
     opacity: 1;
@@ -155,19 +156,21 @@ a {
 
 .message.visible {
     transform: translate(-50%,150%);
-    opacity: 1;
+    opacity: 0.8;
+    z-index: 1;
 }
 
 .insect {
     position: absolute;
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
     display: flex;
     align-items: center;
     justify-content: center;
     transform: translate(-50%, -50%) scale(1);
     transition: transform .3s ease-in-out;
     cursor: pointer;
+    z-index: 10;
 }
 
 .insect.caught {

@@ -115,7 +115,7 @@ function catchInsect() {
 }
 
 function addInsects() {
-  setTimeout(createInsect, 2000);
+  setTimeout(createInsect, 1000);
   // setTimeout(createInsect, 4000);
 }
 

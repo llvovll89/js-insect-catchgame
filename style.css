@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700&display=swap');
 
 * {
     margin: 0;
@@ -12,13 +13,14 @@ body {
     min-height: 100vh;
     overflow: hidden;
     color: #ffffff;
-    background: rgb(39, 39, 42);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .66), rgba(0, 0, 0, .34));
 }
 
 a {
     color: #ffffff;
 }
+
 
 .screen {
     position: relative;
@@ -30,48 +32,88 @@ a {
     min-height: 100vh;
     height: var(--vh, 1vh) * 100;
     width: 100vw;
-    margin: 0 auto;
+    margin: auto;
     transition: margin .5s ease-out;
 }
 
-.section1, .section2 {
-    gap: 2.5rem;
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(./img/mos1.png) center center no-repeat;
+    background-size: 50% 50%;
 }
-
 
 .screen.up {
     margin-top: -100vh;
 }
 
 #title {
-    background: rgba(255, 255, 255, 0.85);
-    border-radius: 12px;
-    padding: 1rem;
-    color: #000;
-    letter-spacing: .25rem;
+    top: 15%;
+    transform: translateY(-15%);
+    position: absolute;
+    color: rgb(237, 84, 84);
+    text-shadow: 0 2px 2px rgb(226, 226, 108);
+    letter-spacing: .55rem;
+    font-size: 3rem;
+    width: max-content;
+    padding: 0 2rem;
+    background: rgba(0, 0, 0, .09);
+    border-radius: 0.4rem;
+    /* border-bottom: 2px solid rgb(237, 84, 84); */
 }
 
 .btn {
-    padding: .75rem 1.5rem;
     border: none;
+    position: absolute;
+    bottom: 10%;
+    transform: translateY(10%);
+    width: 20%;
+    padding: 1rem 2.5rem;
     font-size: 1.25rem;
+    letter-spacing: 1px;
     border-radius: 6px;
-    box-shadow: 3px 6px 2px rgba(0, 0, 0, 0.35);
-    background: #f3f3f3;
-    color: black;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(to right, rgb(237, 84, 84), rgb(226, 226, 108));
+    color: #FFEFFF;
+    font-weight: 600;
+    transition: all 0.2s ease;
     cursor: pointer;
-    transition: all .3s ease-out;
-    opacity: 1;
 }
 
 .btn:hover {
     box-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
-    transition: all .3s ease-in;
+    transition: all 0.2s ease;
+    background: transparent;
 }
 
 .btn:focus {
     border: 1px solid #ffffff;
     opacity: .5;
+}
+
+.section2 {
+    gap: 2rem;
+}
+
+#insects-name {
+    line-height: 1.5;
+    font-size: 2.6rem;
+    letter-spacing: 1px;
+}
+
+#insects-name .kill {
+    font-size: 4rem;
+    color: rgb(234, 50, 50);
+    text-shadow: 0 1px 7px rgba(0, 0, 0, .21);
+}
+
+#insects-name .insect-text {
+    font-size: 4rem;
+    color: rgb(55, 223, 55);
+    text-shadow: 0 1px 7px rgba(0, 0, 0, .21);
 }
 
 .content-list {
@@ -81,41 +123,55 @@ a {
     gap: 1rem;
 }
 
-#insects-name {
-    line-height: 1.4;
-}
-
 .choice-btn {
     position: relative;
     background: transparent;
-    border: 2px solid #ffffff;
+    border: 1px solid #CCC;
     color: #ffffff;
     width: 200px;
     height: 200px;
     border-radius: 6px;
     transition: all .3s ease-out;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .choice-btn:hover {
-    background: #ffffff;
-    color: #3e3e3e;
+    background: #FFEFFF;
+    color: #181818;
     transition: all .3s ease-in;
+}
+
+.choice-btn:hover img {
+    transform: scale(1.3);
+    transition: 0.3s all ease;
+}
+
+.choice-btn:hover p {
+    color: #FFFFFF;
+    border: 1px solid #181818;
+    background: #181718;
+    transition: 0.3s all linear;
 }
 
 .choice-btn p {
     position: absolute;
-    left: 10px;
-    letter-spacing: .25rem;
-    font-size: 1rem;
+    top: 0;
+    right: 3px;
+    font-size: 1.2rem;
     margin: .25rem auto;
     z-index: 10;
+    border-radius: 1.2rem;
+    padding: 0.3rem;
+    border: 1px solid #ccc;
+    transition: 0.3s all linear;
 }
 
 .choice-btn img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.3s all ease;
     image-rendering: -webkit-optimize-contrast;
     z-index: 1;
 }
@@ -127,7 +183,7 @@ a {
 .time, .score {
     position: absolute;
     top: 20px;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .time {
@@ -155,7 +211,7 @@ a {
 }
 
 .message.visible {
-    transform: translate(-50%,150%);
+    transform: translate(-50%, 150%);
     opacity: 0.8;
     z-index: 1;
 }
@@ -178,8 +234,8 @@ a {
 }
 
 .insect img {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
 }
 
 #restart {
@@ -200,21 +256,27 @@ a {
     .screen {
         max-width: 90%;
     }
+
     #insects-name {
         margin-top: 1rem;
         font-size: 1.25rem;
     }
+
+    .btn {
+        width: 80%;
+    }
+
     .choice-btn {
         width: 155px;
         height: 150px;
     }
 
     .time, .score, .message {
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
 
     .insect, .insect img {
-        width: 110px;
-        height: 110px;
+        width: 125px;
+        height: 125px;
     }
 }
